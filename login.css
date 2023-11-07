@@ -1,0 +1,91 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.pokebank-panel {
+    margin-top: 50px;
+}
+
+.panel-heading {
+    background-color: #f7d309; 
+    color: #333;
+    text-align: center;
+}
+
+.poke-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.poke-logo img {
+    width: 70%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.number-pad {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-number {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #333;
+    font-size: 24px;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-number:hover, .btn-number:focus {
+    background-color: #f7d309;
+    color: #fff;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: #f7d309;
+    border: none;
+    color: #333;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-login:hover, .btn-login:focus {
+    background-color: #d9b007;
+    color: #fff;
+}
+.pokebank-panel {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.panel {
+    max-height: none;
+    overflow-y: visible; /
+}
+
+.number-pad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.btn-number {
+    width: 30%; 
+    margin-bottom: 2px; 
+    border-radius: 90%; 
+    padding: 10px 0; 
+}
+

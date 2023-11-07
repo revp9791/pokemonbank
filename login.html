@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Pokémon Bank</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 pokebank-panel">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Pokémon Bank
+                </div>
+                <div class="poke-logo">
+                    <img src="img/pelota.png" alt="Pokémon Logo">
+                </div>
+                <div class="panel-body">
+                    <form action="actions.html" method="get">
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="pinInput" placeholder="PIN"  readonly required>
+                        </div>
+
+                        <div class="number-pad text-center">
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(1)">1</button>
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(2)">2</button>
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(3)">3</button><br>
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(4)">4</button>
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(5)">5</button>
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(6)">6</button><br>
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(7)">7</button>
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(8)">8</button>
+                            <button type="button" class="btn btn-number" onclick="addNumberToPin(9)">9</button>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-login">Iniciar sesión</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+    function addNumberToPin(num) {
+        const pinInput = document.getElementById('pinInput');
+        pinInput.value += num;
+    }
+</script>
+
+</body>
+</html>

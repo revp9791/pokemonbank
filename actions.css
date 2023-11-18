@@ -13,7 +13,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .title {
     font-size: 22px;
     font-weight: bold;
@@ -203,4 +203,16 @@ body {
 
 .modal-close:hover {
     background-color: #aaa;
+}
+
+
+/****************************************************************************/
+
+
+.modal-body-saldo {
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 53%;
+    left: 43%;
 }

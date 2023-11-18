@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acciones</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
     <link rel="stylesheet" href="actions.css">
 </head>
 
 <body>
 
-    <div class="action-container"> <!-- Un contenedor principal para agrupar elementos relacionados -->
+    <div class="action-container"> 
         <div class="title">Bienvenido, [Nombre del Usuario]</div>
-        <!-- Título de bienvenida que probablemente se reemplazaría dinámicamente con el nombre del usuario -->
-        <div class="detail">Número de Cuenta: XXXX-XXXX-XXXX</div>
-        <!-- Detalle del número de cuenta; probablemente también se reemplazaría dinámicamente -->
-        <!--Botones-->
+        <div class="detail" id="nro_cuenta">Número de Cuenta: XXXX-XXXX-XXXX</div>
         <button class="action-button deposit" id="depositar">Depositar</button>
         <button class="action-button withdraw" id="retirar">Retirar</button>
         <button class="action-button check-balance" id="consultarSaldo">Consultar Saldo</button>
@@ -29,24 +30,19 @@
     </div>
 
 
-    <!-- Modal para Consultar Saldo -->
     <div class="modal" id="modalSaldo">
-        <!-- Inicio del modal con ID 'modalSaldo' para referencias futuras ( con JavaScript) -->
-        <div class="modal-content"> <!-- Contenedor principal del contenido del modal -->
-            <div class="modal-header"> <!-- Sección del encabezado del modal -->
+        <div class="modal-content"> 
+            <div class="modal-header"> 
                 <span class="modal-title">Saldo Actual</span>
                 <button class="close-button" id="closeSaldo">×</button>
-                <!-- Botón para cerrar el modal con ID 'closeSaldo' para futuras referencias (por ejemplo, para cerrar el modal con JavaScript) -->
             </div>
         </div>
-        <div class="modal-body">
+        <div class="modal-body-saldo" >
             Tu saldo es de: $XXXX.XX
-            <!-- Contenido del modal que probablemente se actualizaría dinámicamente con el saldo real del usuario -->
         </div>
     </div>
     </div>
 
-    <!-- Modal para Depositar  El código describe un modal que permite al usuario depositar un monto. Al igual que el modal anterior, esta ventana emergente tiene una estructura clásica con un encabezado y un cuerpo. En el encabezado, encontramos el título del modal y un botón para cerrarlo. El cuerpo contiene una breve instrucción, un campo de entrada donde el usuario puede ingresar el monto que desea depositar y un botón para confirmar el depósito.-->
     <div class="modal" id="modalDepositar">
         <div class="modal-content">
             <div class="modal-header">
@@ -61,7 +57,6 @@
         </div>
     </div>
 
-    <!-- Modal para Retirar Este código presenta un modal que permite al usuario retirar un monto de dinero. Tiene un diseño y estructura similares a los modales anteriores, con un encabezado que contiene el título y un botón de cierre, y un cuerpo que proporciona una instrucción, un campo de entrada para el monto a retirar y un botón de confirmación para efectuar el retiro-->
     <div class="modal" id="modalRetirar">
         <div class="modal-content">
             <div class="modal-header">
@@ -76,7 +71,6 @@
         </div>
     </div>
 
-    <!-- Modal para Pagar Servicios Este código define un modal para la funcionalidad de "Pagar Servicios". El usuario tiene la opción de seleccionar un servicio de un menú desplegable y luego ingresar el monto que desea pagar por ese servicio. Por último, hay un botón de confirmación para finalizar el proceso. El diseño y la estructura son coherentes con los otros modales que hemos revisado previamente.-->
     <div class="modal" id="modalPagarServicios">
         <div class="modal-content">
             <div class="modal-header">
@@ -98,47 +92,7 @@
         </div>
     </div>
 
-    <script>
-
-        // Añade un evento de click al botón con ID 'depositar'
-        document.getElementById('depositar').addEventListener('click', function () {
-            document.getElementById('modalDepositar').style.display = 'block';
-        });
-
-        // Añade un evento de click al botón de cerrar del modal con ID 'closeDepositar'
-        document.getElementById('closeDepositar').addEventListener('click', function () {
-            document.getElementById('modalDepositar').style.display = 'none';
-        });
-
-        // Añade un evento de click al botón con ID 'retirar'
-        document.getElementById('retirar').addEventListener('click', function () {
-            document.getElementById('modalRetirar').style.display = 'block';
-        });
-
-        // Añade un evento de click al botón de cerrar del modal con ID 'closeRetirar'
-        document.getElementById('closeRetirar').addEventListener('click', function () {
-            document.getElementById('modalRetirar').style.display = 'none';
-        });
-
-        // Añade un evento de click al botón con ID 'consultarSaldo'
-        document.getElementById('consultarSaldo').addEventListener('click', function () {
-            document.getElementById('modalSaldo').style.display = 'block';
-        });
-
-        // Añade un evento de click al botón de cerrar del modal con ID 'closeSaldo'
-        document.getElementById('closeSaldo').addEventListener('click', function () {
-            document.getElementById('modalSaldo').style.display = 'none';
-        });
-
-        // Añade un evento de click al botón con ID 'pagarServicios'
-        document.getElementById('pagarServicios').addEventListener('click', function () {
-            document.getElementById('modalPagarServicios').style.display = 'block';
-        });
-
-        // Añade un evento de click al botón de cerrar del modal con ID 'closePagarServicios'
-        document.getElementById('closePagarServicios').addEventListener('click', function () {
-            document.getElementById('modalPagarServicios').style.display = 'none';
-        });
+    <script src="actions.js">
 
     </script>
 </body>

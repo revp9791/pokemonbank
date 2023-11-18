@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <link rel="stylesheet" href="login.css">
     <title>Login Pokémon Bank</title>
 </head>
@@ -20,9 +22,9 @@
                     <img src="img/pelota.png" alt="Pokémon Logo">
                 </div>
                 <div class="panel-body">
-                    <form action="actions.html" method="get">
+                    <form id="loginForm" method="post">
                         <div class="form-group">
-                            <input type="password" class="form-control" id="pinInput" placeholder="PIN"  readonly required>
+                            <input type="password" class="form-control" id="pinInput" placeholder="PIN" readonly required>
                         </div>
 
                         <div class="number-pad text-center">
@@ -55,6 +57,9 @@
         pinInput.value += num;
     }
 </script>
+<script src="login.js">
 
+
+</script>
 </body>
 </html>
